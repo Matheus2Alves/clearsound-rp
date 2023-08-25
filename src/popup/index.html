@@ -1,13 +1,16 @@
 <html lang="en-gb" dir="ltr">
 	<head>
 		<link rel="stylesheet" href="./style.css">
+		<meta charset="UTF-8">
 	</head>
 	<body>
 		<form id="interface">
-			<input type="number" min="0" max="200" step="1">
+			<input type="number" min="0" max="200" step="1" id="volume-level">
+			<input type="number" name="decibels" id="decibels"> <p>decibels</p>
 			<input type="range" min="0" max="200" step="1">
+			<button id="stop">X</button>
 		</form>
-		<button id="stop">X</button>
+		<a href="#">descubra os Decibels ideais para você</a>
 		<script src="./script.js"></script>
 	</body>
 </html>

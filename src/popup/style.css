@@ -9,15 +9,18 @@ body {
 	
 	display: inline-block;
 	width: 288px;
+	height: 100px;
+	background: linear-gradient(95deg, #034aa3, #4218b8)
 }
 body > * {
 	margin: 0 auto;
 	
-	color: var(--grey-dark);
+	color: var(--grey-darker);
 }
 
 form {
-	display: inline-block;
+	display: grid;
+	grid-template-rows: 40px 40px auto;
 	height: auto;
 	width: 256px;
 	
@@ -26,15 +29,18 @@ form {
 form > * {
 	display: inline-block;
 	height: 24px;
-	padding: 0;
+	padding: 5px;
 	margin: 0;
 	vertical-align: middle;
 	
 	color: var(--grey-dark);
 }
 
-form > input[type=number] {
+form > #volume-level {
+	grid-row: 1;	
 	width: 48px;
+	position: relative;
+	left: -10px;
 	text-align: right;
 	
 	font-weight: bold;
@@ -42,14 +48,39 @@ form > input[type=number] {
 	border: solid 1px var(--grey-light);
 	border-radius: 8px;
 }
+
+form > #decibels {
+	width: 48px;
+	text-align: right;
+	position: relative;
+	left: -10px;
+	font-weight: bold;
+
+	border: solid 1px var(--grey-light);
+	border-radius: 8px;
+}
+
+p {
+	font-weight: bold;
+	color: white;
+}
+
+a {
+	font-weight: bold;
+	color: yellow;
+	text-align: center;
+	text-decoration: none;
+}
+
 form > input[type=number]:focus {
 	border: solid 1px transparent;
 }
 
 form > input[type=range] {
+	grid-row: 1;
 	height: 8px;
 	width: 200px;
-	margin: 0 4px 0 4px;
+	margin: 8px 4px 0 4px;
 	
 	-webkit-appearance: none;
 	
@@ -80,7 +111,8 @@ form input[type=range]::-webkit-slider-thumb:hover {
 	background-color: var(--grey-darker);
 }
 
-button {
+#stop {
+	grid-row: 1;
 	display: inline-block;
 	height: 24px;
 	width: 24px;
@@ -98,9 +130,9 @@ button {
 	
 	transition: all 0.2s ease-in-out;
 }
-button:hover {
+#stop:hover {
 	background-color: var(--grey-lighter);
 }
-button:focus {
+#stop:focus {
 	outline: 0;
 }
