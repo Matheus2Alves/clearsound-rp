@@ -50,11 +50,13 @@ form > #volume-level {
 }
 
 form > #decibels {
+	grid-row: 1;
 	width: 48px;
 	text-align: right;
 	position: relative;
 	left: -10px;
 	font-weight: bold;
+	background-color: white;
 
 	border: solid 1px var(--grey-light);
 	border-radius: 8px;
@@ -63,6 +65,9 @@ form > #decibels {
 p {
 	font-weight: bold;
 	color: white;
+	position: relative;
+	left: -16px;
+	top: -15px;
 }
 
 a {
